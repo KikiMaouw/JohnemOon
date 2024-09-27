@@ -36,11 +36,11 @@ function saveGameState() {
 
   setTimeout(() => {
     console.log("\nProfil sauvegardé...");
-  }, 1000)
+  }, 2000)
 
   setTimeout(() => {
     mainMenu();
-  }, 1000)
+  }, 3000)
 }
 
 // function loadGameStat()
@@ -100,7 +100,7 @@ function proposeFirstJohnemon(){
 }
 
 function mainMenu() {
-  console.log("\n===============================\n\n -- Menu principal --\n\n1: Combattre\n2: Voir la collection\n3: soigner un JohemOon\n4: Quitter\n");
+  console.log("\n===============================\n\n -- Menu principal --\n\n1: Combattre\n2: Voir la collection\n3: Soigner un JohemOon\n4: Quitter\n");
   rl.question("\nQue souhaites-tu faire ?", (choice) => {
     switch (choice) {
 

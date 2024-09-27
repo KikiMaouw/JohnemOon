@@ -15,9 +15,13 @@ class JohnemonArena {
         console.log(`${this.johnemon_2.name} est KO !!! ${this.johnemon_1.name} remporte le combat :)`);
         break;
       }
+
       this.johnemon_2.attack(this.johnemon_1);
 
-      if (this.johnemon_1.healthPool)
+      if (this.johnemon_1.healthPool <= 0 ) {
+        console.log(`${this.johnemon_1.name} est KO !!! ${this.johnemon_2.name}remporte le combat :)`);
+        break;
+      }
     }
   }
 
@@ -63,4 +67,4 @@ class JohnemonArena {
   }
 }
 
-module.exports = JohnemonArena
+module.exports = JohnemonArena;
