@@ -1,14 +1,14 @@
 {
   "player": {
-    "name": "kiki"
+    "name": "er"
   },
   "johnemon": {
-    "name": "MatVin",
+    "name": "OliNaud",
     "level": 1,
     "experience": 0,
-    "attack": 4,
+    "attack": 3,
     "defense": 2,
-    "health": 20,
-    "phrase": "Wambooooooo"
+    "health": 25,
+    "phrase": "JohnemOon, go!"
   }
 }

@@ -43,8 +43,6 @@ function saveGameState() {
   }, 3000)
 }
 
-// function loadGameStat()
-
 function askForName() {   
     rl.question("Quel est ton nom petit scarabé ?\n", (name) => {
       if (/^[A-Za-zÀ-ÿ]+$/.test(name)) { 
@@ -129,6 +127,10 @@ function mainMenu() {
   });
 }
 
+function starBattle (){
+  console.log("\nHooo un Johnemon sauvage devant nous !!!");
+  const wildJohnemon = new Johnemon("Sauvage");
+}
 
 function startGame() {
   console.log("\n\nHey, salut toi! \n\nBienvenue dans l'univers de JohnemOon. \n");
@@ -136,9 +138,4 @@ function startGame() {
 }
 
 startGame();
-/*
-chosenJohnemon.sayCatchPhrase();
-chosenJohnemon.attack(johnemon2);
-chosenJohnemon.gainExperience(johnemon2);
-chosenJohnemon.evolve();
-*/
+
