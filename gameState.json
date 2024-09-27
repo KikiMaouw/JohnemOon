@@ -1,0 +1,14 @@
+{
+  "player": {
+    "name": "Kiki"
+  },
+  "johnemon": {
+    "name": "RaVia",
+    "level": 1,
+    "experience": 0,
+    "attack": 2,
+    "defense": 2,
+    "health": 22,
+    "phrase": "JohnemOon, go!"
+  }
+}
