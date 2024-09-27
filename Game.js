@@ -46,15 +46,16 @@ function saveGameState() {
 function askForName() {   
     rl.question("Quel est ton nom petit scarabé ?\n", (name) => {
       if (/^[A-Za-zÀ-ÿ]+$/.test(name)) { 
-      console.log(`\nBienvenue ${name}`);
-      player.name = name; //modifie le nom du joueur créée en haut du fichier
+      console.log(`\n..........................................................\n\nBienvenue \x1b[1m\x1b[34m${name}\x1b[0m`); //crochet 1m pour le gras et 34m pour le bleu
+      player.name = name;
       //console.log(player.name);
-      proposeFirstJohnemon(); // passe à la suite
+
+      proposeFirstJohnemon(); // passe à la prochaine fonction
     } else {
-      console.log("\n>>> Ton nom ne dois contenir que des lettres. Recommence.\n");
+      console.log("\n>>>\x1b[31m Ton nom ne doit contenir que des lettres.\x1b[0m Recommence.\n..........................................................\n");
       askForName();
     };
-  })
+  });
 } 
  
 function proposeFirstJohnemon(){
@@ -62,7 +63,7 @@ function proposeFirstJohnemon(){
   let poke2 = new Johnemon();
   let poke3 = new Johnemon();
 
-  rl.question(`\n++++++++++++++++++++++++++++++++\n\nChoisis ton premier JohnemOom:\n\n1: ${poke1.name}\n2: ${poke2.name}\n3: ${poke3.name}\n\n  `, (choice) => {
+  rl.question(`\nChoisis ton premier JohnemOom:\n\n1: ${poke1.name}\n2: ${poke2.name}\n3: ${poke3.name}\n\n  `, (choice) => {
     if (/^[1-3]$/.test(choice)) {
       let chosenJohnemon;
       switch (choice) {
@@ -79,7 +80,7 @@ function proposeFirstJohnemon(){
         break;      
       }
 
-      console.log(`\nTu as choisi: ${chosenJohnemon.name}  >>  " ${chosenJohnemon.catchPhrase} "\n
+      console.log(`\n..........................................................\n\nTu as choisi: ${chosenJohnemon.name}  >>  " ${chosenJohnemon.catchPhrase} "\n
         Level:          ${chosenJohnemon.level}
         Attaque:        ${chosenJohnemon.attackRange}
         Défense:        ${chosenJohnemon.defenseRange}
@@ -98,7 +99,7 @@ function proposeFirstJohnemon(){
 }
 
 function mainMenu() {
-  console.log("\n===============================\n\n -- Menu principal --\n\n1: Combattre\n2: Voir la collection\n3: Soigner un JohemOon\n4: Quitter\n");
+  console.log("\n..........................................................\n\n -- Menu principal --\n\n1: Combattre\n2: Voir la collection\n3: Soigner un JohemOon\n4: Quitter\n");
   rl.question("\nQue souhaites-tu faire ?", (choice) => {
     switch (choice) {
 
@@ -120,7 +121,7 @@ function mainMenu() {
         break;
 
       default:
-        console.log("\nChoix invalide. Recommence.");
+        console.log('\n\x1b[31mChoix invalide\x1b[0m. Recommence.');
         mainMenu();
         break;    
     }
@@ -133,7 +134,7 @@ function starBattle (){
 }
 
 function startGame() {
-  console.log("\n\nHey, salut toi! \n\nBienvenue dans l'univers de JohnemOon. \n");
+  console.log("\n..........................................................\n\nHey, salut toi! \n\nBienvenue dans l'univers de JohnemOon. \n");
   askForName();
 }
 
